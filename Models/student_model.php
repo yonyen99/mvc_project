@@ -4,7 +4,7 @@ function m_get_data() {
 
     $query = "SELECT st.id,firstname,lastname,sex,cl.title 
                 FROM student st 
-                LEFT JOIN class cl ON cl.id = st.class_id WHERE st.class_id = 2";
+                LEFT JOIN class cl ON cl.id = st.class_id ";
     // $query = "SELECT * FROM student stu INNER JOIN class cla ON stu.class_id = cla.id WHERE stu.class_id = 1";
     include "connection.php";   
   
@@ -88,26 +88,22 @@ function student_add_data($data) {
     } 
     return $result;
 }
-
 // add_setpermission
-function student_add_permission($data) {
-    include "connection.php";
-    $firstname = $_POST['fname'];
-    $lastname = $_POST['lname'];
-    $sex = $_POST['sex'];
-    $class_id = $_POST['class'];
-    $subjects= $_POST['subjects'];
-    $permissions= $_POST['permissions'];
-    $description= $_POST['description'];
+// function student_add_permission($data) {
+//     include "connection.php";
+//     $firstname = $_POST['fname'];
+//     $lastname = $_POST['lname'];
+//     $sex = $_POST['sex'];
+//     $class_id = $_POST['class'];
+//     $subjects= $_POST['subjects'];
+//     $permissions= $_POST['permissions'];
+//     $description= $_POST['description'];
 
-    $query = "INSERT INTO attendents(firstname,lastname,sex,classname,subject,permission,description)
-              VALUES('$firstname','$lastname','$sex','$class_id','$subjects,'$permissions','$description')";
-    $result=mysqli_query($connection, $query);
-    return $result;
-}
-
-
-
+//     $query = "INSERT INTO attendents(firstname,lastname,sex,classname,subject,permission,description)
+//               VALUES('$firstname','$lastname','$sex','$class_id','$subjects,'$permissions','$description')";
+//     $result=mysqli_query($connection, $query);
+//     return $result;
+// }
 
 function m_delete() {
     include "connection.php";
@@ -115,3 +111,5 @@ function m_delete() {
     $result = mysqli_query($connection, "DELETE FROM student WHERE id= $id");
     return $result;
 }
+
+

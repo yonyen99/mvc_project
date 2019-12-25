@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="index.php?action=view" class="btn btn-success">Go Back</a>
+                        <a href="index4.php?action=view" class="btn btn-success">Go Back</a>
                         <input type="submit" name="create" value="Submit" class="btn btn-primary float-right">
                     </div>
                 </form>

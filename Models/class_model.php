@@ -40,3 +40,14 @@ function class_details() {
     
     return $result;
 }
+
+function update_class(){
+    if(isset($_POST['edit'])){
+    $id = $_GET['id'];
+    include "connection.php";
+    $title = $_POST['class_title'];
+    $query = "UPDATE class SET title= '$title' WHERE id = $id";
+    $update = mysqli_query($connection, $query);
+}
+return $update;
+}

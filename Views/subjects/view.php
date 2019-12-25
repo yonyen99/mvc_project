@@ -24,7 +24,6 @@
       <td>
         <a href="index3.php?action=edit_form&id=<?php echo $rows['id'];?>"><i class="material-icons">edit</i></a>
         <a href="index3.php?action=delete&id=<?php echo $rows['id'];?>"><i class="material-icons" onclick="return confirm('Are you sure you want to delete?');">delete</i></a>
-        <a href="index3.php?action=edit&id=<?php echo $rows['id'];?>"><i class="material-icons">edit</i></a>
       </td>
     </tr>
   </tbody>

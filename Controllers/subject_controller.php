@@ -30,6 +30,8 @@ function form_data(&$data) {
     header("Location: index3.php?action=$action");
 }
 
+
+
 function delete(&$data) {
     //code here
     $result = delete_subject();

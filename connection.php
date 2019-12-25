@@ -1,3 +1,3 @@
 <?php
 
-$connection = mysqli_connect('localhost','root','','mydb');
+$connection = mysqli_connect('localhost','root','','mvc_version22');

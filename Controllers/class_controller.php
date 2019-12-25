@@ -47,13 +47,14 @@ function edit_form(&$data) {
     $data['page'] = "classes/edit";
 }
 
-function edit_subject(&$data) {
-    //code here
-    $update_subject = update_subject($_POST);
-    if($update_subject) {
-        $action = "list_subject";
-    }else {
+function form_edit(&$data){
+    $update_class = update_class($_POST);
+    if($update_class){
+        $action = "list_class";
+    }else{
         $action = "edit_form";
     }
     header("Location: index2.php?action=$action");
 }
+
+
